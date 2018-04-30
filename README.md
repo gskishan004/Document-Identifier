@@ -3,6 +3,7 @@
 Run
 	pip install -r requirements.txt
 	python doc_iden.py
+	export GOOGLE_APPLICATION_CREDENTIALS = "key.json"
 
 
 Tasks:

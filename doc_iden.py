@@ -1,22 +1,19 @@
 #Using google vision api to identify the doc 
 import io
 import os
-import configparser
 
-
-config = configparser.ConfigParser()
-config.read('config.ini')
-
-credential = config['DEFAULT']['cred']
 
 # Imports the Google Cloud client library
 from google.cloud import vision
 from google.cloud.vision import types
-from google.oauth2 import credentials
+
+from google.oauth2 import service_account
+
+credentials = service_account.Credentials.from_service_account_file('key.json')
 
 
 # Instantiates a client
-client = vision.ImageAnnotatorClient(credentials = credential)
+client = vision.ImageAnnotatorClient(credentials = credentials)
 
 # The name of the image file to annotate
 file_name = 'resources/1.jpg'
