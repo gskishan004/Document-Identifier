@@ -51,7 +51,11 @@ def print_web_annotations(annotations):
             print('Description: {}'.format(entity.description))
 
 def extract_features(file_name):
-    credentials = service_account.Credentials.from_service_account_file('key.json')
+
+    # Get the keyfile
+    key_file = os.path.abspath(os.curdir) + "\\resources\\key.json"
+
+    credentials = service_account.Credentials.from_service_account_file(key_file)
 
 
     # Instantiates a client

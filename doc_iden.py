@@ -1,25 +1,40 @@
-from lib.gvision_extract_features import extract_features
+from lib.gvision_extract_features 	import extract_features
+from lib.direct_matcher 			import direct_match
+from lib.spacy_nlp 					import spacy_nlp_match
 
-file_name = 'resources/1.jpg'
+#file_name = raw_input("Input File : ")
+
+file_name = 'test_images/1.jpg'
 
 #***************************************************
 #                PHASE -- I
 #***************************************************
 
-#ask user for file name UI ??
+# User Input for file name UI ??
 
-#use Google Vision API to extract features from Image
-extract_features(file_name)
+# Google Vision API to extract features from Image
 
-#use NLP to find closest match to predefined categoris
+features 			 = extract_features(file_name)
 
-#suggest closest match with confidence percentage
+gvision_direct_match = direct_match    (features)
+gvision_nlp_match    = spacy_nlp_match (features)
 
-#incase of discrepency ask the uer to provide inputs
 
-#save the image with correct foder as its label name 
+#***************************************************
+#         PLACEHOLDER for Future funtions
+#***************************************************
 
-#start the training in differnt thread as doc no reaches threshold
+# ocr_nlp_match()
+# cnn_match()
+# ocr_ml_match()
+
+# Suggest closest match with confidence percentage
+
+# Incase of discrepency ask the user to provide inputs
+
+# Save the image with correct foder as its label name 
+
+# Start the training in differnt thread as doc no reaches threshold
 
 #***************************************************
 #                PHASE -- II
