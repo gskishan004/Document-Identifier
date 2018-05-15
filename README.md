@@ -10,9 +10,9 @@ Run
 Incase of error while running first command, consider running terminal with Admin privilages
 
 
-#Tasks:
+# Tasks:
 
-##Done:
+## Done:
 - [x] Finalize between 3 options : Image -> OCR -> ML (or) Image -> ML (YOLO/CNN) (or) Image -> Google Vision API.
 - [X] Code for direct match.
 - [X] Code for spacy_nlp_match
@@ -20,7 +20,7 @@ Incase of error while running first command, consider running terminal with Admi
 - [X] Segregate Code into 4 masters - gvision_feature_pred, ocr_nlp_pred, cnn_pred, ocr_ml_pred.
 - [X] Fix multiple lines in doc_type bug
 
-##On Going:
+## On Going:
 - [ ] Code for OCR in gvision_extract_features
 - [ ] Get Keys for GCP.
 - [ ] Collate all google API to one file
