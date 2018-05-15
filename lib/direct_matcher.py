@@ -8,8 +8,9 @@ def direct_match(features):
 
 	with open(doc_file) as f:
 		for line in f:
-			for feature in features:
-				if (feature.lower() == line.lower()):
-					matches.append(feature.lower())
+			if (features):
+				for feature in features:
+					if (line.lower() in feature[0].lower()):
+						matches.append(feature)
 
 	return matches
