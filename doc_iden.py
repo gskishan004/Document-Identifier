@@ -13,9 +13,13 @@ file_name = 'test_images/6.jpg'
 
 features 			 = extract_features(file_name)
 gvision_direct_match = direct_match    (features)
-#gvision_nlp_match   = spacy_nlp_match (features)
+gvision_nlp_match    = spacy_nlp_match (features)
 
-predictions 		 = gvision_direct_match
+predictions 		 = gvision_direct_match + gvision_nlp_match
+
+# print ("Featues 				: ", features)
+# print ("gvision_direct_match	: ", gvision_direct_match)
+# print ("gvision_nlp_match		: ", gvision_nlp_match)
 
 
 #***************************************************

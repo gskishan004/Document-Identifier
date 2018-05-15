@@ -1,6 +1,10 @@
 import spacy
+import os
 
-def spacy_nlp_match():
+nlp			= spacy.load('en_core_web_lg')
+result = []
+
+def spacy_nlp_match(features):
 
 	doc_file = os.path.abspath(os.curdir) + "\\resources\\doc_types.txt"
 
@@ -10,10 +14,16 @@ def spacy_nlp_match():
 	with open(doc_file) as f:
 		for line in f:
 			for feature in features:
-				similarity = line.similarity(feature)
+				# replace function ensures that there is no \n in line
+				line_nlp	= nlp(line.replace("\n",""))
+				similarity 	= line_nlp.similarity(nlp(feature[0]))
 
 				if (similarity>max_similarity):
-					match 		   = line
+					match 		   = line_nlp
 					max_similarity = similarity	
+					confidence 	   = feature[1] * round(max_similarity,2)
 
-	return (match, max_similarity)
+
+	result.append((match, confidence))
+
+	return result

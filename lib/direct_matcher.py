@@ -10,7 +10,8 @@ def direct_match(features):
 		for line in f:
 			if (features):
 				for feature in features:
-					if (line.lower() in feature[0].lower()):
+					# replace function removes hidden \n from the line
+					if (line.lower().replace("\n","") in feature[0].lower()):
 						matches.append(feature)
 
 	return matches
