@@ -30,8 +30,8 @@ def get_web_annotations(annotations):
                 webs.append((entity.description, entity.score))
     return webs
 
-def get_document_text_detection():
-
+def get_document_text_detection(annotations):
+	return 
 
 
 

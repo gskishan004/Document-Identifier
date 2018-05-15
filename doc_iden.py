@@ -3,9 +3,16 @@ from lib.direct_matcher 			import direct_match
 from lib.spacy_nlp 					import spacy_nlp_match
 from lib.doc_category               import find_best_doc_category
 
-#file_name = raw_input("Input File : ")
+import sys
 
-file_name = 'test_images/14.jpg'
+#file_name = raw_input("Input File : ")
+#file_name = 'test_images/1.jpg'
+
+if (len(sys.argv) < 2):
+	print ("Provide image name as command line argument")
+	sys.exit(0)
+
+file_name = 'test_images/' + sys.argv[1] + '.jpg'
 
 #***************************************************
 #           PHASE -- I (Doc Identifier)
@@ -38,6 +45,6 @@ predictions 		 = gvision_direct_match + gvision_nlp_match
 result 				= find_best_doc_category(predictions)
 
 if result:
-	print('Document identified as : {} with {:.2f}% confidence'.format(result[0], result[1]))
+	print('Document identified as : {} with {:.2f}% confidence'.format(result[0], result[1]*100))
 else :
 	print('Document not matched with any predefined categories')
