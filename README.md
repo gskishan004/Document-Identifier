@@ -1,6 +1,6 @@
 # Document-Identifier
 
-Save GCP key as "key.json" in the root dir
+Save GCP key as "key.json" in resources folder.
 
 Run
 * pip install -r requirements.txt
