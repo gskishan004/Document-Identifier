@@ -5,7 +5,7 @@ from lib.doc_category               import find_best_doc_category
 
 #file_name = raw_input("Input File : ")
 
-file_name = 'test_images/6.jpg'
+file_name = 'test_images/14.jpg'
 
 #***************************************************
 #           PHASE -- I (Doc Identifier)
