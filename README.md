@@ -3,9 +3,9 @@
 Save GCP key as "key.json" in the root dir
 
 Run
-	* pip install -r requirements.txt
-	* python doc_iden.py
-	* python -m spacy download en_core_web_lg
+* pip install -r requirements.txt
+* python doc_iden.py
+* python -m spacy download en_core_web_lg
 
 Incase of error while running first command, consider running terminal with Admin privilages
 
