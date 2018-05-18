@@ -9,6 +9,8 @@ Run
 
 Incase of error while running first command, consider running terminal with Admin privilages
 
+* git clone https://github.com/AlexeyAB/darknet.git
+
 
 # Tasks:
 
