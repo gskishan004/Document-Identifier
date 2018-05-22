@@ -25,8 +25,9 @@ Incase of error while running first command, consider running terminal with Admi
 
 ## On Going:
 - [ ] Make baisc pipeline for training 
-- [ ] Convert function to get data ready for YOLO
+- [X] Convert function to get data ready for YOLO
 - [ ] Category function to dynamically assign category to a numeric value
+- [ ] Modify the convert function to read one file at a time
 - [ ] Integrate YOLO v2 model
-- [ ] Get Keys for GCP.
+- [ ] Get Keys for GCP
 - [ ] Collate all google API to one file
