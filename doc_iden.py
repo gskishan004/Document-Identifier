@@ -6,10 +6,16 @@ from lib.training_data				import save_for_training
 
 import sys
 import os
+import platform
 
 if (len(sys.argv) < 2):
 	print ("Provide image name as command line argument")
 	sys.exit(0)
+
+if (platform.system() == "Windows"):
+	os.system('cls')
+else:
+	os.system('clear')
 
 file_name = 'test_images/' + sys.argv[1] + '.jpg'
 
@@ -36,14 +42,14 @@ predictions 		 = gvision_direct_match + gvision_nlp_match
 result 				= find_best_doc_category(predictions)
 
 if result:
-	print('Document identified as : {} with {:.2f}% confidence'.format(result[0], result[1]*100))
+	print('\nDocument identified as : {} with {:.2f}% confidence\n'.format(result[0], result[1]*100))
 else :
-	print('Document not matched with any predefined categories')
+	print('\nDocument not matched with any predefined categories\n')
 
 is_pred_correct = input ("Press Y if the prediction is correct, otherwise press N : ")
 
 if (is_pred_correct.upper() == 'Y'):
-	save_for_training(image_name = sys.argv[1], category = result)
+	save_for_training(image_name = sys.argv[1], category = result[0])
 
 elif (is_pred_correct.upper() == 'N'):
 	correct_pred = input ("Please enter the correct label")

@@ -22,6 +22,7 @@ Incase of error while running first command, consider running terminal with Admi
 - [X] Segregate Code into 4 masters - gvision_feature_pred, ocr_nlp_pred, cnn_pred, ocr_ml_pred
 - [X] Fix multiple lines in doc_type bug
 - [X] Code for OCR in gvision_extract_features
+- [X] Complete 2nd module 
 
 ## On Going:
 - [ ] Make baisc pipeline for training 
@@ -31,3 +32,4 @@ Incase of error while running first command, consider running terminal with Admi
 - [ ] Integrate YOLO v2 model
 - [ ] Get Keys for GCP
 - [ ] Collate all google API to one file
+- [X] Clean origional dir after converting the data - [FIXED by not opening the file in append mode]
