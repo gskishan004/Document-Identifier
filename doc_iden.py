@@ -57,3 +57,6 @@ elif (is_pred_correct.upper() == 'N'):
 
 else:
 	print('Incorrect input, image discared')
+
+
+

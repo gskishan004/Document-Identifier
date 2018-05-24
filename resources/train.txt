@@ -1,0 +1,6 @@
+data/yolo_format/1.jpg
+data/yolo_format/2.jpg
+data/yolo_format/3.jpg
+data/yolo_format/4.jpg
+data/yolo_format/5.jpg
+data/yolo_format/6.jpg

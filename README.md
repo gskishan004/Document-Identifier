@@ -1,13 +1,18 @@
 # Document-Identifier
 
 * Save GCP key as "key.json" in resources folder.
+* download https://pjreddie.com/media/files/darknet19_448.conv.23
 
 Run
 * pip install -r requirements.txt
 * python -m spacy download en_core_web_lg
 * git clone https://github.com/AlexeyAB/darknet.git
 
+
 * python doc_iden.py < name of the image >
+
+* darknet.exe detector train cfg/obj.data cfg/yolo-obj.cfg darknet19_448.conv.23
+
 
 Incase of error while running first command, consider running terminal with Admin privilages
 
