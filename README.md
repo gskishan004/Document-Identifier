@@ -4,9 +4,10 @@
 
 Run
 * pip install -r requirements.txt
-* python doc_iden.py
 * python -m spacy download en_core_web_lg
 * git clone https://github.com/AlexeyAB/darknet.git
+
+* python doc_iden.py <name of the image>
 
 Incase of error while running first command, consider running terminal with Admin privilages
 
