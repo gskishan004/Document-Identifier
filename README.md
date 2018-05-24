@@ -1,15 +1,14 @@
 # Document-Identifier
 
-Save GCP key as "key.json" in resources folder.
+* Save GCP key as "key.json" in resources folder.
 
 Run
 * pip install -r requirements.txt
 * python doc_iden.py
 * python -m spacy download en_core_web_lg
+* git clone https://github.com/AlexeyAB/darknet.git
 
 Incase of error while running first command, consider running terminal with Admin privilages
-
-* git clone https://github.com/AlexeyAB/darknet.git
 
 
 # Tasks:
