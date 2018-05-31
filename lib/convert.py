@@ -59,7 +59,7 @@ def yolo_format_convert(category, txt_path, image_name):
             ymin = elems[1]
             ymax = elems[3]
             #
-            img_path = str('data/yolo_format/%s.jpg'%(1))
+            img_path = str('data/yolo_format/'+ image_name +'.jpg')
             #t = magic.from_file(img_path)
             #wh= re.search('(\d+) x (\d+)', t).groups()
             im=Image.open(img_path)
