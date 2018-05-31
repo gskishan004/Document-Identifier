@@ -19,7 +19,7 @@ def save_for_training(image_name,category):
 		width  		  = width  - 5
 		height		  = height - 5
 
-		bbox = "0 "+str(height)+" "+str(width)+" 0" 
+		bbox = "0 0 "+ str(width)+" "+str(height) 
 	
 		with open(doc_file, 'w') as f:
 			f.write(category_id+"\n"+bbox)

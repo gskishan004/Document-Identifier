@@ -3,6 +3,10 @@
 * Save GCP key as "key.json" in resources folder.
 * download https://pjreddie.com/media/files/darknet19_448.conv.23
 
+* follow steps in http://www.horstmann.com/ccc/help/cygwin/install.html to install cygwin
+* open cygwin to navigate to darknet dir and run "make" cmd
+
+
 Run
 * pip install -r requirements.txt
 * python -m spacy download en_core_web_lg
@@ -13,6 +17,7 @@ Run
 
 * darknet.exe detector train cfg/obj.data cfg/yolo-obj.cfg darknet19_448.conv.23
 
+* darknet.exe detector test cfg/obj.data cfg/yolo-obj.cfg yolo-obj1000.weights data/testimage.jpg
 
 Incase of error while running first command, consider running terminal with Admin privilages
 
