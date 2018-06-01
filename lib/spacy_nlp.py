@@ -24,6 +24,6 @@ def spacy_nlp_match(features):
 					confidence 	   = feature[1] * round(max_similarity,2)
 
 
-	result.append((match, confidence))
+	result.append((str(match), confidence))
 
 	return result

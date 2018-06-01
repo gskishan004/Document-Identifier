@@ -27,7 +27,17 @@ features 			 = extract_features(file_name)
 gvision_direct_match = direct_match    (features)
 gvision_nlp_match    = spacy_nlp_match (features)
 
+for p in gvision_direct_match:
+	print ("type 1-->", type(p[0]))
+
+for p in gvision_nlp_match:
+	print ("type 2-->", type(p[0]))
+
+
 predictions 		 = gvision_direct_match + gvision_nlp_match
+
+for p in predictions:
+	print ("type 3-->", type(p[0]))
 
 
 #***************************************************

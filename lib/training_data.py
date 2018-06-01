@@ -24,6 +24,7 @@ def save_for_training(image_name,category):
 		with open(doc_file, 'w') as f:
 			f.write(category_id+"\n"+bbox)
 
+		im = im.convert('RGB')
 		im.save(train_img_name)
 
 	print ("Saving data for training")
