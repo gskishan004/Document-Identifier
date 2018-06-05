@@ -16,10 +16,10 @@ def create_xml(image_name, category, folder):
 	with Image.open(image_loc) as im:
 		width, height = im.size
 
-	xmin   	= 2
-	ymin   	= 2
-	xmax	= width - 2
-	ymax	= height - 2
+	xmin   	= 10
+	ymin   	= 10
+	xmax	= width - 10
+	ymax	= height - 10
 
 	
 	
@@ -56,10 +56,10 @@ def create_xml(image_name, category, folder):
 
 import os, fnmatch
 
-folder = 'final_data'
+folder = 'test'
 
 files = fnmatch.filter(os.listdir(folder), '*.jpg')
 for f in files:
 	print (f)
 	
-	create_xml(f, "us", folder)
+	create_xml(f, "uk", folder)

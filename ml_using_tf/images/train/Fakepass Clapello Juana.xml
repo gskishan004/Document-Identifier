@@ -1,0 +1,26 @@
+<annotation>
+  <folder>train</folder>
+  <filename>Fakepass Clapello Juana.jpg</filename>
+  <path>C:\Users\Lenovo\Desktop\Document_Identifier\ml_using_tf\models\research\object_detection\images\train\Fakepass Clapello Juana.jpg</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>271</width>
+    <height>280</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>uk</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>10</xmin>
+      <ymin>10</ymin>
+      <xmax>261</xmax>
+      <ymax>270</ymax>
+    </bndbox>
+  </object>
+</annotation>
