@@ -10,12 +10,10 @@
 Run
 * pip install -r requirements.txt
 * python -m spacy download en_core_web_lg
-
-ML related commands
-* refer readme inside ml_using_tf dir
-
 * python doc_iden.py < name of the image >
 
+
+ML related commands - refer readme inside ml_using_tf dir
 
 
 Incase of error while running first command, consider running terminal with Admin privilages

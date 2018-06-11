@@ -1,52 +1,72 @@
 from PIL 			import Image
-from lib.convert	import yolo_format_convert
 
 import os
 import sys
 
-def save_for_training(image_name,category):
 
-	category_id 	= get_category(category)
-
-
+# this function now just saves the data in ml/data dir
+def save_for_training(image_name):
 	image_loc		= "test_images/" 		+ image_name + ".jpg"
-	train_img_name  = "data/yolo_format/" 	+ image_name + ".jpg"
-	doc_file 		= "data/original/"		+ image_name + ".txt"
+	train_img_name  = "ml/data/" 			+ image_name + ".jpg"
 
 	with Image.open(image_loc) as im:
-
-		width, height = im.size
-		width  		  = width  - 5
-		height		  = height - 5
-
-		bbox = "0 0 "+ str(width)+" "+str(height) 
-	
-		with open(doc_file, 'w') as f:
-			f.write(category_id+"\n"+bbox)
 
 		im = im.convert('RGB')
 		im.save(train_img_name)
 
-	print ("Saving data for training")
-
-	yolo_format_convert(category_id, doc_file, image_name)
-
-	print ("Converted and saved data to YOLO format")
 
 
-def get_category(category):
+
+
+
+
+#***************************************************
+#           		OLD FUNCTIONS
+#***************************************************
+
+
+
+# from lib.convert	import yolo_format_convert
+
+# def save_for_training(image_name,category):
+
+# 	category_id 	= get_category(category)
+# 	image_loc		= "test_images/" 		+ image_name + ".jpg"
+# 	train_img_name  = "data/yolo_format/" 	+ image_name + ".jpg"
+# 	doc_file 		= "data/original/"		+ image_name + ".txt"
+
+# 	with Image.open(image_loc) as im:
+
+# 		width, height = im.size
+# 		width  		  = width  - 5
+# 		height		  = height - 5
+
+# 		bbox = "0 0 "+ str(width)+" "+str(height) 
 	
+# 		with open(doc_file, 'w') as f:
+# 			f.write(category_id+"\n"+bbox)
+
+# 		im = im.convert('RGB')
+# 		im.save(train_img_name)
+
+# 	print ("Saving data for training")
+
+# 	yolo_format_convert(category_id, doc_file, image_name)
+
+# 	print ("Converted and saved data to YOLO format")
 
 
-	doc_file = os.path.abspath(os.curdir) + "\\resources\\doc_types.txt"
+# def get_category(category):
 
-	with open(doc_file) as f:
-		category_id = 0 
-		for line in f:
-			# replace function removes hidden \n from the line
-			if (line.lower().replace("\n","") in category.lower()):
-				return str(category_id)
-			category_id += 1
+# 	doc_file = os.path.abspath(os.curdir) + "\\resources\\doc_types.txt"
 
-	print ("No category found for the document")
-	sys.exit(0)
+# 	with open(doc_file) as f:
+# 		category_id = 0 
+# 		for line in f:
+# 			# replace function removes hidden \n from the line
+# 			if (line.lower().replace("\n","") in category.lower()):
+# 				return str(category_id)
+# 			category_id += 1
+
+# 	print ("No category found for the document")
+# 	sys.exit(0)

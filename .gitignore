@@ -1,2 +1,3 @@
-/ml_using_tf/models
+/ml/models
+/ml/object_detection
 /resources/key.json

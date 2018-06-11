@@ -1,0 +1,26 @@
+<annotation>
+  <folder>test</folder>
+  <filename>a-2013-european-union-biometric-passport-for-the-united-kingdom-with-D2X64A.jpg</filename>
+  <path>C:\Users\Lenovo\Desktop\Document_Identifier\ml_using_tf\models\research\object_detection\images\test\a-2013-european-union-biometric-passport-for-the-united-kingdom-with-D2X64A.jpg</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>1272</width>
+    <height>1390</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>uk</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>10</xmin>
+      <ymin>10</ymin>
+      <xmax>1262</xmax>
+      <ymax>1380</ymax>
+    </bndbox>
+  </object>
+</annotation>
