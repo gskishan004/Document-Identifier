@@ -10,14 +10,13 @@
 Run
 * pip install -r requirements.txt
 * python -m spacy download en_core_web_lg
-* git clone https://github.com/AlexeyAB/darknet.git
 
+ML related commands
+* refer readme inside ml_using_tf dir
 
 * python doc_iden.py < name of the image >
 
-* darknet.exe detector train cfg/obj.data cfg/yolo-obj.cfg darknet19_448.conv.23
 
-* darknet.exe detector test cfg/obj.data cfg/yolo-obj.cfg yolo-obj1000.weights data/testimage.jpg
 
 Incase of error while running first command, consider running terminal with Admin privilages
 
@@ -33,13 +32,25 @@ Incase of error while running first command, consider running terminal with Admi
 - [X] Fix multiple lines in doc_type bug
 - [X] Code for OCR in gvision_extract_features
 - [X] Complete 2nd module 
+- [X] Clean origional dir after converting the data - [FIXED by not opening the file in append model
+- [X] Make baisc pipeline for training 
+- [X] Convert function to get data ready for YOLO
+- [X] Category function to dynamically assign category to a numeric value
+- [X] Modify the convert function to read one file at a time
+- [X] Integrate YOLO v2 model (CLOSED)
 
 ## On Going:
-- [ ] Make baisc pipeline for training 
-- [X] Convert function to get data ready for YOLO
-- [ ] Category function to dynamically assign category to a numeric value
-- [ ] Modify the convert function to read one file at a time
-- [ ] Integrate YOLO v2 model
-- [ ] Get Keys for GCP
+
+- [ ] Remove darknet dependencies (function for converting the data to YOLO format etc..) 
+- [ ] Integrate Tensorflow model
+- [ ] PPT stating the reson for choosing TF or darknet
+- [ ] Annotate all the images
+- [ ] fix predictor.py
+- [ ] Get Keys for GCP 
 - [ ] Collate all google API to one file
-- [X] Clean origional dir after converting the data - [FIXED by not opening the file in append mode]
+
+
+
+## * Replacing Darknet YOLO model with Tensorflow - objection detection models *
+
+
