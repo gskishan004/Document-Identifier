@@ -51,6 +51,6 @@ Incase of error while running first command, consider running terminal with Admi
 
 
 
-## * Replacing Darknet YOLO model with Tensorflow - objection detection models *
+## * Replacing Darknet YOLO model with Tensorflow - objection detection model *
 
 
