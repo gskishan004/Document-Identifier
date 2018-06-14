@@ -1,2 +1,0 @@
-passport_us
-passport_uk
