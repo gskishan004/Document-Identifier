@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train</folder>
+	<filename>Mr-Bean-David-Cameron-spoof-driviing-licence.jpg</filename>
+	<path>C:\Users\Lenovo\Desktop\Document_Identifier\ml\object_detection\images\train\Mr-Bean-David-Cameron-spoof-driviing-licence.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1200</width>
+		<height>720</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>dl_uk</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>23</xmin>
+			<ymin>10</ymin>
+			<xmax>1132</xmax>
+			<ymax>710</ymax>
+		</bndbox>
+	</object>
+</annotation>

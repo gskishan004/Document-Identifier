@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train</folder>
+	<filename>75b7d2e04060b9c624ee517a438e5f94--chelsea-ford.jpg</filename>
+	<path>C:\Users\Lenovo\Desktop\Document_Identifier\ml\object_detection\images\train\75b7d2e04060b9c624ee517a438e5f94--chelsea-ford.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>480</width>
+		<height>643</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>passport_us</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>6</xmin>
+			<ymin>328</ymin>
+			<xmax>473</xmax>
+			<ymax>634</ymax>
+		</bndbox>
+	</object>
+</annotation>

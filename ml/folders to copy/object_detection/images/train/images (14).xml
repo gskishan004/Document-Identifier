@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train</folder>
+	<filename>images (14).jpg</filename>
+	<path>C:\Users\Lenovo\Desktop\Document_Identifier\ml\object_detection\images\train\images (14).jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>278</width>
+		<height>181</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>dl_uk</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>14</xmin>
+			<ymin>21</ymin>
+			<xmax>261</xmax>
+			<ymax>161</ymax>
+		</bndbox>
+	</object>
+</annotation>

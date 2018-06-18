@@ -1,0 +1,26 @@
+<annotation>
+  <folder>train</folder>
+  <filename>cropped-hassan-british-passport-copy2.jpg</filename>
+  <path>C:\Users\Lenovo\Desktop\Document_Identifier\ml_using_tf\models\research\object_detection\images\train\cropped-hassan-british-passport-copy2.jpg</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>1200</width>
+    <height>1024</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>uk</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>10</xmin>
+      <ymin>10</ymin>
+      <xmax>1190</xmax>
+      <ymax>1014</ymax>
+    </bndbox>
+  </object>
+</annotation>

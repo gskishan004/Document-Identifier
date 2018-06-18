@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train</folder>
+	<filename>license-flag.jpg</filename>
+	<path>C:\Users\Lenovo\Desktop\Document_Identifier\ml\object_detection\images\train\license-flag.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>503</width>
+		<height>344</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>dl_uk</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>22</xmin>
+			<ymin>24</ymin>
+			<xmax>482</xmax>
+			<ymax>315</ymax>
+		</bndbox>
+	</object>
+</annotation>

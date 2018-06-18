@@ -15,6 +15,12 @@ Run
 
 ML related commands - refer readme inside ml_using_tf dir
 
+# * Delete all checkpoints in the training folder *
+
+run ML using 
+python main_ml.py
+
+
 
 Incase of error while running first command, consider running terminal with Admin privilages
 

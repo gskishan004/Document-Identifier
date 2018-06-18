@@ -1,0 +1,26 @@
+<annotation>
+  <folder>train</folder>
+  <filename>passports-conversation-topics-dialogs-reading-comprehension-_78240_3.jpg</filename>
+  <path>C:\Users\Lenovo\Desktop\Document_Identifier\ml_using_tf\models\research\object_detection\images\train\passports-conversation-topics-dialogs-reading-comprehension-_78240_3.jpg</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>1527</width>
+    <height>1080</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>uk</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>10</xmin>
+      <ymin>10</ymin>
+      <xmax>1517</xmax>
+      <ymax>1070</ymax>
+    </bndbox>
+  </object>
+</annotation>

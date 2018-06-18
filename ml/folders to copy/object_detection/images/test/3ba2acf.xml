@@ -1,0 +1,26 @@
+<annotation>
+	<folder>test</folder>
+	<filename>3ba2acf.jpg</filename>
+	<path>C:\Users\Lenovo\Desktop\Document_Identifier\ml\object_detection\images\test\3ba2acf.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>97</width>
+		<height>61</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>dl_uk</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>2</xmin>
+			<ymin>1</ymin>
+			<xmax>95</xmax>
+			<ymax>58</ymax>
+		</bndbox>
+	</object>
+</annotation>

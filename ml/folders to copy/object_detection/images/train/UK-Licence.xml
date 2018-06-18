@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train</folder>
+	<filename>UK-Licence.jpg</filename>
+	<path>C:\Users\Lenovo\Desktop\Document_Identifier\ml\object_detection\images\train\UK-Licence.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>600</width>
+		<height>350</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>dl_uk</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>14</xmin>
+			<ymin>5</ymin>
+			<xmax>592</xmax>
+			<ymax>343</ymax>
+		</bndbox>
+	</object>
+</annotation>

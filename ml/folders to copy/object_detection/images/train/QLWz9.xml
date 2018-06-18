@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train</folder>
+	<filename>QLWz9.jpg</filename>
+	<path>C:\Users\Lenovo\Desktop\Document_Identifier\ml\object_detection\images\train\QLWz9.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>600</width>
+		<height>413</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>passport_uk</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>13</xmin>
+			<ymin>6</ymin>
+			<xmax>583</xmax>
+			<ymax>395</ymax>
+		</bndbox>
+	</object>
+</annotation>

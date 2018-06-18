@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train</folder>
+	<filename>drivers-licence-template-driving-fake-license-free.jpg</filename>
+	<path>C:\Users\Lenovo\Desktop\Document_Identifier\ml\object_detection\images\train\drivers-licence-template-driving-fake-license-free.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>112</width>
+		<height>146</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>dl_uk</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>4</xmin>
+			<ymin>4</ymin>
+			<xmax>106</xmax>
+			<ymax>69</ymax>
+		</bndbox>
+	</object>
+</annotation>

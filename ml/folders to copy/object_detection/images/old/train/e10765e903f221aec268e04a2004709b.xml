@@ -1,0 +1,26 @@
+<annotation>
+  <folder>train</folder>
+  <filename>e10765e903f221aec268e04a2004709b.jpg</filename>
+  <path>C:\Users\Lenovo\Desktop\Document_Identifier\ml_using_tf\models\research\object_detection\images\train\e10765e903f221aec268e04a2004709b.jpg</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>366</width>
+    <height>255</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>uk</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>10</xmin>
+      <ymin>10</ymin>
+      <xmax>356</xmax>
+      <ymax>245</ymax>
+    </bndbox>
+  </object>
+</annotation>

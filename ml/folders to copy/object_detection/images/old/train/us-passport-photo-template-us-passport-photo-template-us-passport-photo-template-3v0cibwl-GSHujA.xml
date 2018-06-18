@@ -1,0 +1,26 @@
+<annotation>
+  <folder>train</folder>
+  <filename>us-passport-photo-template-us-passport-photo-template-us-passport-photo-template-3v0cibwl-GSHujA.jpg</filename>
+  <path>C:\Users\Lenovo\Desktop\Document_Identifier\ml_using_tf\models\research\object_detection\images\train\us-passport-photo-template-us-passport-photo-template-us-passport-photo-template-3v0cibwl-GSHujA.jpg</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>72</width>
+    <height>100</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>us</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>10</xmin>
+      <ymin>10</ymin>
+      <xmax>62</xmax>
+      <ymax>90</ymax>
+    </bndbox>
+  </object>
+</annotation>

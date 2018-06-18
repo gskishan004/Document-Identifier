@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train</folder>
+	<filename>e939eebd496300fa5b61c2577e14c1e7.jpg</filename>
+	<path>C:\Users\Lenovo\Desktop\Document_Identifier\ml\object_detection\images\train\e939eebd496300fa5b61c2577e14c1e7.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>264</width>
+		<height>375</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>passport_us</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>2</xmin>
+			<ymin>187</ymin>
+			<xmax>260</xmax>
+			<ymax>371</ymax>
+		</bndbox>
+	</object>
+</annotation>

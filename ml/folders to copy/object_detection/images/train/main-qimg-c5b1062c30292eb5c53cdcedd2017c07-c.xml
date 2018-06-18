@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train</folder>
+	<filename>main-qimg-c5b1062c30292eb5c53cdcedd2017c07-c.jpg</filename>
+	<path>C:\Users\Lenovo\Desktop\Document_Identifier\ml\object_detection\images\train\main-qimg-c5b1062c30292eb5c53cdcedd2017c07-c.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>549</width>
+		<height>387</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>passport_us</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>9</xmin>
+			<ymin>2</ymin>
+			<xmax>538</xmax>
+			<ymax>368</ymax>
+		</bndbox>
+	</object>
+</annotation>
