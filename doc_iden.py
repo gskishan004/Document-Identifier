@@ -1,70 +1,31 @@
 from lib.gvision_extract_features 	import extract_features
 from lib.direct_matcher 			import direct_match
 from lib.spacy_nlp 					import spacy_nlp_match
+import sys
+import os
+
 from lib.doc_category               import find_best_doc_category
 from lib.training_data				import save_for_training
 
-import sys
-import os
-import platform
+def main_doc_iden(file_name):
+	features 			 = extract_features(file_name)
+	gvision_direct_match = direct_match    (features)
+	gvision_nlp_match    = spacy_nlp_match (features)
 
-if (len(sys.argv) < 2):
-	print ("Provide image name as command line argument")
-	sys.exit(0)
+	predictions 		 = gvision_direct_match + gvision_nlp_match
 
-if (platform.system() == "Windows"):
-	os.system('cls')
-else:
-	os.system('clear')
+	result 				 = find_best_doc_category(predictions)
 
-file_name = 'test_images/' + sys.argv[1] + '.jpg'
-
-#***************************************************
-#           PHASE -- I (Doc Identifier)
-#***************************************************
-
-features 			 = extract_features(file_name)
-gvision_direct_match = direct_match    (features)
-gvision_nlp_match    = spacy_nlp_match (features)
-
-predictions 		 = gvision_direct_match + gvision_nlp_match
-
-result 				 = find_best_doc_category(predictions)
-
-if result:
-	print('\nDocument identified as : {} with {:.2f}% confidence\n'.format(result[0], result[1]*100))
-else :
-	print('\nDocument not matched with any predefined categories\n')
-
-save_for_training(image_name = sys.argv[1] + ".jpg")
+	if result:
+		print('File identified as {} with {:.2f}% confidence\n'.format(result[0], result[1]*100))
+		return (result[0])
+	else :
+		print('File not matched with any predefined categories\n')
+		return ("No_Match")
 
 
 
 
-
-
-
-
-#***************************************************
-#           		OLD FUNCTIONS
-#***************************************************
-
-
-
-
-
-
-# is_pred_correct = input ("Press Y if the prediction is correct, otherwise press N : ")
-
-# if (is_pred_correct.upper() == 'Y'):
-# 	save_for_training(image_name = sys.argv[1], category = result[0])
-
-# elif (is_pred_correct.upper() == 'N'):
-# 	correct_pred = input ("Please enter the correct label")
-# 	save_for_training(image_name = sys.argv[1], category = correct_pred)
-
-# else:
-# 	print('Incorrect input, image discared')
-
+#save_for_training(image_name = sys.argv[1] + ".jpg")
 
 
