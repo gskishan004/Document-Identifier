@@ -6,7 +6,8 @@ import sys
 import platform
 import os
 
-from   doc_iden import main_doc_iden
+from   doc_iden    import main_doc_iden
+#from ml.ml_predict import predict
 
 def sort_doc(path,ml_flag):
     doc_list = []
@@ -14,11 +15,13 @@ def sort_doc(path,ml_flag):
         
 
         if(ml_flag):
-            print ("Using cutom ML model to process the file")
+            print ("Using cutom ML model to process ",file)
+            output_folder = predict(file)
 
         else:
-            print ("Using GCP APIs to process file", file)
-            output_folder = main_doc_iden(file) 
+            print ("Using GCP APIs to process ", file)
+            #output_folder = main_doc_iden(file) 
+ 
         move_file(file, output_folder)    
 
 def move_file(input_path, output_path):
@@ -41,15 +44,15 @@ else:
 
 
 parser = argparse.ArgumentParser(description='Sort the identification docs into output folder')
-
-parser.add_argument('-i' , help='define the input dir', default="input")
-parser.add_argument('-m', action='store_true', default=False,
+parser.add_argument('-i', '--input' , default="input",
+					dest='i', 
+					help='define the input dir')
+parser.add_argument('-m', '--useML'	, action='store_true', default=False,
                     dest='m_arg',
                     help='Use ML for docuemnt prediction')
-parser.add_argument('-t', action='store_true', default=False,
+parser.add_argument('-t', '--train' , action='store_true', default=False,
                     dest='t_arg',
                     help='Train the model')
-
 args = parser.parse_args()
 
 if args.i == 'input':

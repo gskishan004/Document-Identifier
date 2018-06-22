@@ -16,12 +16,10 @@ def find_category(categories, classInt):
 		if category['id'] == classInt:
 			return category['name']
 
-def main_obj_det(img_name):
+def predict(img_name):
 
 	# This is needed since the notebook is stored in the object_detection folder.
 	sys.path.append("..")
-
-	img_name = img_name + '.jpg'
 
 
 	# Name of the directory containing the object detection module we're using
@@ -116,6 +114,3 @@ def main_obj_det(img_name):
 	    i+=1
 
 	return (scores[0][classNo]*100, find_category(categories, classes[0][classNo]))
-
-
-main_obj_det('1')
