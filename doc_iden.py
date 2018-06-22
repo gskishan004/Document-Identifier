@@ -10,9 +10,9 @@ from lib.training_data				import save_for_training
 def main_doc_iden(file_name):
 	features 			 = extract_features(file_name)
 	gvision_direct_match = direct_match    (features)
-	gvision_nlp_match    = spacy_nlp_match (features)
+	#gvision_nlp_match    = spacy_nlp_match (features)
 
-	predictions 		 = gvision_direct_match + gvision_nlp_match
+	predictions 		 = gvision_direct_match #+ gvision_nlp_match
 
 	result 				 = find_best_doc_category(predictions)
 

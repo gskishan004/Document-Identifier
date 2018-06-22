@@ -19,19 +19,19 @@ def sort_doc(path,ml_flag):
         else:
             print ("Using GCP APIs to process file", file)
             output_folder = main_doc_iden(file) 
-        move_file(path, output_folder)    
+        move_file(file, output_folder)    
 
 def move_file(input_path, output_path):
 
     output_path    = os.path.join(os.getcwd(), ("output/"+output_path))
-    file_name = input.rsplit('/', 1)[1]
+    file_name = input_path.rsplit('\\', 1)[1]
     print ("File name ", file_name) 
 
     if not os.path.exists(output_path):
         os.makedirs(output_path)
 
 
-    os.rename(input_path+file_name, output_path+file_name)
+    os.rename(input_path, output_path+"\\"+file_name)
 
 
 if (platform.system() == "Windows"):
@@ -48,7 +48,7 @@ parser.add_argument('-m', action='store_true', default=False,
                     help='Use ML for docuemnt prediction')
 parser.add_argument('-t', action='store_true', default=False,
                     dest='t_arg',
-                    help='Train the ML model')
+                    help='Train the model')
 
 args = parser.parse_args()
 
