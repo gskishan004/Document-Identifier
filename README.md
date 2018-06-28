@@ -57,9 +57,9 @@ Incase of error while running first command, consider running terminal with Admi
 # Tasks:
 
 ## On Going:
-- [ ] Train flag for ML
-- [ ] Get Keys for GCP 
+- [ ] Integrate trainig code with main.py
 - [ ] Code to simplify training by removing manual steps involved
+- [ ] Get Keys for GCP 
 
 ## Done:
 - [x] Developed a fairly stable version of document identifier
@@ -67,5 +67,5 @@ Incase of error while running first command, consider running terminal with Admi
 - [x] PPT stating the reson for choosing TF or darknet
 - [X] fix predictor
 - [X] Program reads all the files from dir 
-- [X] Predict flag for ML
+- [X] Integrate prediction code with main.py
 
