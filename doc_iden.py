@@ -18,10 +18,10 @@ def main_doc_iden(file_name):
 
 	if result:
 		print('File identified as {} with {:.2f}% confidence\n'.format(result[0], result[1]*100))
-		return (result[0])
+		return (result[0],result[1]*100)
 	else :
 		print('File not matched with any predefined categories\n')
-		return ("No_Match")
+		return ("No_Match",0)
 
 
 

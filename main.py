@@ -16,11 +16,11 @@ def sort_doc(path,ml_flag):
 
         if(ml_flag):
             print ("Using cutom ML model to process ",file)
-            output_folder = predict(file)
+            output_folder, confidence = predict(file)
 
         else:
             print ("Using GCP APIs to process ", file)
-            output_folder = main_doc_iden(file) 
+            output_folder, confidence = main_doc_iden(file) 
  
         move_file(file, output_folder)    
 
@@ -57,7 +57,7 @@ args = parser.parse_args()
 
 if args.i == 'input':
     parser.print_help()
-    print ("\nUsing default dir as input")
+    print ("\nUsing default dir for input")
 
 folder     = args.i
 ml_flag    = args.m_arg

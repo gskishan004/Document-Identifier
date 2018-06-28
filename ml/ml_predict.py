@@ -32,10 +32,10 @@ def predict(img_name):
 	# Path to frozen detection graph .pb file, which contains the model that is used
 	# for object detection.
 
-	PATH_TO_CKPT = os.path.join(CWD_PATH,'models','research','object_detection',MODEL_NAME,'frozen_inference_graph.pb')
+	PATH_TO_CKPT = os.path.join(CWD_PATH,'ml','models','research','object_detection',MODEL_NAME,'frozen_inference_graph.pb')
 
 	# Path to label map file
-	PATH_TO_LABELS = os.path.join(CWD_PATH,'models','research','object_detection','training','labelmap.pbtxt')
+	PATH_TO_LABELS = os.path.join(CWD_PATH,'ml','models','research','object_detection','training','labelmap.pbtxt')
 
 	# Path to image
 	PATH_TO_IMAGE = os.path.join(CWD_PATH,IMAGE_NAME)
@@ -113,4 +113,4 @@ def predict(img_name):
 	        classNo = i
 	    i+=1
 
-	return (scores[0][classNo]*100, find_category(categories, classes[0][classNo]))
+	return (find_category(categories, classes[0][classNo]), scores[0][classNo]*100)
