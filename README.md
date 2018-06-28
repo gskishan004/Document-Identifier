@@ -1,6 +1,8 @@
 # Document-Identifier
-Document Identifier is a software which harnesses the power of various API in GCP along with Machine learning to sort legal documents. 
+Document Identifier is a software which harnesses the power of GCP API's along with Machine learning to sort legal documents. 
+
 Legal documents can include passports, driving licences etc. of any country.
+
 Machine learning is implemented using tensorflow.
 
 
@@ -10,17 +12,17 @@ Currently the program supports images in jpeg format
 
 ## Setup
 
-* Save GCP key as "key.json" in resources folder
+* clone this repo
 
-* Clone this repo
+* Save GCP key as "key.json" in resources folder
 
 * clone tensorflow repo from  https://github.com/tensorflow/models 
 
-* copy models dir indide ml dir
+* copy models dir to ml folder
 
 * download faster_rcnn_inception_v2_coco_2018_01_28 http://download.tensorflow.org/models/object_detection/faster_rcnn_inception_v2_coco_2018_01_28.tar.gz
 
-* Extract the faster_rcnn_inception_v2_coco_2018_01_28 folder to the models\research\object_detection folder
+* Extract the faster_rcnn_inception_v2_coco_2018_01_28 folder to the ml\models\research\object_detection folder
 
 * set PYTHONPATH = < * REPLACE THIS WITH REPO LOCATION * >\ml\models;< * REPLACE THIS WITH REPO LOCATION * >\ml\models\research;< * REPLACE THIS WITH REPO LOCATION * >\ml\models\research\slim;< * REPLACE THIS WITH REPO LOCATION * >\ml\models\research\object_detection
 
@@ -35,7 +37,8 @@ Change directories to the \models\research directory and run the following:
 
 * python -m spacy download en_core_web_lg
 
-* Delete all checkpoints in the training folder *
+Delete all checkpoints in the training folder
+
 Incase of error while running first command, consider running terminal with Admin privilages
 
 ## Running the code
@@ -45,7 +48,9 @@ Incase of error while running first command, consider running terminal with Admi
 ### Optional flags:
 
 -m : predict only using ML 
+
 -t : train the model
+
 -i : use another dir for input (By default input dir is taken as input)
 
 
