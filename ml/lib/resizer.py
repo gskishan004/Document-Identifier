@@ -8,7 +8,8 @@ from PIL import Image
 
 
 def resize():
-	dir_path = os.getcwd() + "/data"
+	CWD_PATH = os.getcwd()
+	dir_path = os.path.join(CWD_PATH,'ml','data')
 
 	for filename in os.listdir(dir_path):
 		# If the images are not .JPG images, change the line below to match the image type.

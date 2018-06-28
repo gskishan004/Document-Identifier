@@ -8,8 +8,11 @@ import os
 
 from   doc_iden         import main_doc_iden
 from   ml.ml_predict    import predict
+from   ml.ml_train      import train
 
 def sort_doc(path,ml_flag):
+
+
     doc_list = []
     for file in glob.glob(path + '/*.jpg'):
         
@@ -21,7 +24,7 @@ def sort_doc(path,ml_flag):
         else:
             print ("Using GCP APIs to process ", file)
             output_folder, confidence = main_doc_iden(file) 
- 
+            
         move_file(file, output_folder)    
 
 def move_file(input_path, output_path):
@@ -65,4 +68,9 @@ train_flag = args.t_arg
 
 image_dir  = os.path.join(os.getcwd(), (folder))
 
-sort_doc(image_dir,ml_flag)
+if(train_flag):
+    print ("Training the model")
+    train()
+
+else:
+    sort_doc(image_dir,ml_flag)

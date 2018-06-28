@@ -2,8 +2,8 @@ import glob, os
 
 def divide():
 
-	path_data 	= 'data'
-	destination	= 'models/research/object_detection/images'
+	path_data 	= 'ml/data'
+	destination	= 'ml/models/research/object_detection/images'
 
 	# Percentage of images to be used for the test set
 	percentage_test = 10;

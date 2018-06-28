@@ -58,6 +58,10 @@ tf.logging.set_verbosity(tf.logging.INFO)
 flags = tf.app.flags
 flags.DEFINE_string('master', '', 'Name of the TensorFlow master to use.')
 flags.DEFINE_integer('task', 0, 'task id')
+
+# adding this to supress the error
+flags.DEFINE_boolean('t', False, 'train id')
+
 flags.DEFINE_integer('num_clones', 1, 'Number of clones to deploy per worker.')
 flags.DEFINE_boolean('clone_on_cpu', False,
                      'Force clones to be deployed on CPU.  Note that even if '

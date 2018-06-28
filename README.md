@@ -1,14 +1,10 @@
 # Document-Identifier
 Document Identifier is a software which harnesses the power of GCP API's along with Machine learning to sort legal documents. 
 
-Legal documents can include passports, driving licences etc. of any country.
-
-Machine learning is implemented using tensorflow.
+Legal documents can include passports, driving licences etc. of any country.Machine learning is implemented using tensorflow.
 
 
-
-
-Currently the program supports images in jpeg format
+Currently the program supports jpg images
 
 ## Setup
 
@@ -30,12 +26,13 @@ Currently the program supports images in jpeg format
 Run the following :
 * pip install -r requirements.txt
 
+* python -m spacy download en_core_web_lg
+
 * conda install -c anaconda protobuf
 
-Change directories to the \models\research directory and run the following:
+Change directories to the \ml\models\research directory and run the following:
 * protoc --python_out=. .\object_detection\protos\anchor_generator.proto .\object_detection\protos\argmax_matcher.proto .\object_detection\protos\bipartite_matcher.proto .\object_detection\protos\box_coder.proto .\object_detection\protos\box_predictor.proto .\object_detection\protos\eval.proto .\object_detection\protos\faster_rcnn.proto .\object_detection\protos\faster_rcnn_box_coder.proto .\object_detection\protos\grid_anchor_generator.proto .\object_detection\protos\hyperparams.proto .\object_detection\protos\image_resizer.proto .\object_detection\protos\input_reader.proto .\object_detection\protos\losses.proto .\object_detection\protos\matcher.proto .\object_detection\protos\mean_stddev_box_coder.proto .\object_detection\protos\model.proto .\object_detection\protos\optimizer.proto .\object_detection\protos\pipeline.proto .\object_detection\protos\post_processing.proto .\object_detection\protos\preprocessor.proto .\object_detection\protos\region_similarity_calculator.proto .\object_detection\protos\square_box_coder.proto .\object_detection\protos\ssd.proto .\object_detection\protos\ssd_anchor_generator.proto .\object_detection\protos\string_int_label_map.proto .\object_detection\protos\train.proto .\object_detection\protos\keypoint_box_coder.proto .\object_detection\protos\multiscale_anchor_generator.proto .\object_detection\protos\graph_rewriter.proto
 
-* python -m spacy download en_core_web_lg
 
 Delete all checkpoints in the training folder
 
@@ -51,14 +48,17 @@ Incase of error while running first command, consider running terminal with Admi
 
 -t : train the model
 
+* After the model is trained press Ctrl + C and run the following command from object_detection dir (where XXXX is highest checkpoint number)
+* python export_inference_graph.py --input_type image_tensor --pipeline_config_path training/faster_rcnn_inception_v2_pets.config --trained_checkpoint_prefix training/model.ckpt-XXXX --output_directory inference_graph
+
 -i : use another dir for input (By default input dir is taken as input)
 
 
 # Tasks:
 
 ## On Going:
-- [ ] Integrate trainig code with main.py
-- [ ] Code to simplify training by removing manual steps involved
+- [ ] remove dependency on user for running set pythonpath
+- [ ] remove dependency on user for running export_inference_graph
 - [ ] Get Keys for GCP 
 
 ## Done:
@@ -68,4 +68,5 @@ Incase of error while running first command, consider running terminal with Admi
 - [X] fix predictor
 - [X] Program reads all the files from dir 
 - [X] Integrate prediction code with main.py
-
+- [x] Code to simplify training by removing manual steps involved
+- [X] Integrate trainig code with main.py
