@@ -6,8 +6,8 @@ import sys
 import platform
 import os
 
-from   doc_iden    import main_doc_iden
-#from ml.ml_predict import predict
+from   doc_iden         import main_doc_iden
+from   ml.ml_predict    import predict
 
 def sort_doc(path,ml_flag):
     doc_list = []
@@ -20,7 +20,7 @@ def sort_doc(path,ml_flag):
 
         else:
             print ("Using GCP APIs to process ", file)
-            #output_folder = main_doc_iden(file) 
+            output_folder = main_doc_iden(file) 
  
         move_file(file, output_folder)    
 

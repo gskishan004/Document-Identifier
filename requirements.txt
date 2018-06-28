@@ -8,5 +8,4 @@ Cython
 matplotlib
 pandas
 opencv-python
-protobuf
 jupyter
