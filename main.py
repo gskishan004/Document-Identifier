@@ -4,7 +4,19 @@ import pandas as pd
 import argparse
 import sys
 import platform
-import os
+
+CWD_PATH = os.getcwd()
+
+
+p1 = os.path.join(CWD_PATH,'ml','models')
+p2 = os.path.join(CWD_PATH,'ml','models','research')
+p3 = os.path.join(CWD_PATH,'ml','models','research','slim')
+p4 = os.path.join(CWD_PATH,'ml','models','research','object_detection')
+
+sys.path.append(p1)
+sys.path.append(p2)
+sys.path.append(p3)
+sys.path.append(p4)
 
 from   doc_iden         import main_doc_iden
 from   ml.ml_predict    import predict

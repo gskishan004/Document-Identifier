@@ -20,8 +20,6 @@ Currently the program supports jpg images
 
 * Extract the faster_rcnn_inception_v2_coco_2018_01_28 folder to the ml\models\research\object_detection folder
 
-* set PYTHONPATH = < * REPLACE THIS WITH REPO LOCATION * >\ml\models;< * REPLACE THIS WITH REPO LOCATION * >\ml\models\research;< * REPLACE THIS WITH REPO LOCATION * >\ml\models\research\slim;< * REPLACE THIS WITH REPO LOCATION * >\ml\models\research\object_detection
-
 
 Run the following :
 * pip install -r requirements.txt
@@ -57,9 +55,10 @@ Incase of error while running first command, consider running terminal with Admi
 # Tasks:
 
 ## On Going:
-- [ ] remove dependency on user for running set pythonpath
+
 - [ ] remove dependency on user for running export_inference_graph
 - [ ] Get Keys for GCP 
+- [ ] Segregate various docs from an image 
 
 ## Done:
 - [x] Developed a fairly stable version of document identifier
@@ -70,3 +69,4 @@ Incase of error while running first command, consider running terminal with Admi
 - [X] Integrate prediction code with main.py
 - [x] Code to simplify training by removing manual steps involved
 - [X] Integrate trainig code with main.py
+- [X] remove dependency on user for running set pythonpath
