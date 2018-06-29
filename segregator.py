@@ -1,0 +1,2 @@
+def segregate(image):
+	

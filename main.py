@@ -18,9 +18,10 @@ sys.path.append(p2)
 sys.path.append(p3)
 sys.path.append(p4)
 
-from   doc_iden         import main_doc_iden
-from   ml.ml_predict    import predict
-from   ml.ml_train      import train
+from   doc_iden                 import main_doc_iden
+from   ml.ml_predict            import predict
+from   ml.ml_train              import train
+from   ml.ml_predict_multiple   import predict_multiple
 
 def sort_doc(path,ml_flag):
 
@@ -68,6 +69,10 @@ parser.add_argument('-m', '--useML'	, action='store_true', default=False,
 parser.add_argument('-t', '--train' , action='store_true', default=False,
                     dest='t_arg',
                     help='Train the model')
+parser.add_argument('-s', '--segregate' , action='store_true', default=False,
+                    dest='s_arg',
+                    help='Segregate multiple docs from a image')
+
 args = parser.parse_args()
 
 if args.i == 'input':
@@ -77,12 +82,17 @@ if args.i == 'input':
 folder     = args.i
 ml_flag    = args.m_arg
 train_flag = args.t_arg
+seg_flag   = args.s_arg
 
 image_dir  = os.path.join(os.getcwd(), (folder))
 
 if(train_flag):
     print ("Training the model")
     train()
+
+elif(seg_flag):
+    print ("Segregating the doc")
+    predict_multiple(image_dir+"\\test.jpg")
 
 else:
     sort_doc(image_dir,ml_flag)

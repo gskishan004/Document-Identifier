@@ -97,8 +97,6 @@ def predict(img_name):
 
 	# Draw the results of the detection (aka 'visulaize the results')
 
-	print ("Number of detections :", num_detections)
-
 	i               = 0 
 	classNo         = []
 
