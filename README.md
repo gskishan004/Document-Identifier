@@ -1,10 +1,10 @@
 # Document-Identifier
-Document Identifier is a software which harnesses the power of GCP API's along with Machine learning to sort legal documents. 
+Document Identifier is a software which harnesses the power of GCP API's along with Machine learning to sort documents into folders. 
 
-Legal documents can include passports, driving licences etc. of any country.Machine learning is implemented using tensorflow.
+Legal documents can include passports, driving licences etc. of any country. Machine learning is implemented using tensorflow.
 
 
-Currently the program supports jpg images
+Currently the program supports jpg images and docx files.
 
 ## Setup
 
