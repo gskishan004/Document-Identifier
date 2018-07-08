@@ -19,14 +19,14 @@ sys.path.append(p3)
 sys.path.append(p4)
 
 from   doc_iden                 import main_doc_iden
+from   lib.word_doc_iden        import main_word_doc_iden 
+from   lib.word_doc_iden        import remove_doc_files
 from   ml.ml_predict            import predict
 from   ml.ml_train              import train
 from   ml.ml_predict_multiple   import predict_multiple
 
 def sort_doc(path,ml_flag):
 
-
-    doc_list = []
     for file in glob.glob(path + '/*.jpg'):
         
 
@@ -44,7 +44,6 @@ def move_file(input_path, output_path):
 
     output_path    = os.path.join(os.getcwd(), ("output/"+output_path))
     file_name = input_path.rsplit('\\', 1)[1]
-    print ("File name ", file_name) 
 
     if not os.path.exists(output_path):
         os.makedirs(output_path)
@@ -73,18 +72,23 @@ parser.add_argument('-s', '--segregate' , action='store_true', default=False,
                     dest='s_arg',
                     help='Segregate multiple docs from a image')
 
+parser.add_argument('-w', '--word_doc' , action='store_true', default=False,
+                    dest='w_arg',
+                    help='Sort images from word document')
+
 args = parser.parse_args()
 
 if args.i == 'input':
     parser.print_help()
     print ("\nUsing default dir for input")
 
-folder     = args.i
-ml_flag    = args.m_arg
-train_flag = args.t_arg
-seg_flag   = args.s_arg
+folder          = args.i
+ml_flag         = args.m_arg
+train_flag      = args.t_arg
+seg_flag        = args.s_arg
+word_doc_flag   = args.w_arg
 
-image_dir  = os.path.join(os.getcwd(), (folder))
+image_dir       = os.path.join(os.getcwd(), (folder))
 
 if(train_flag):
     print ("Training the model")
@@ -93,6 +97,18 @@ if(train_flag):
 elif(seg_flag):
     print ("Segregating the doc")
     predict_multiple(image_dir+"\\test.jpg")
+
+elif(word_doc_flag):
+    print ("Processing images from word doc")
+    #returns file names
+    file_names = main_word_doc_iden(image_dir)
+
+    remove_doc_files(image_dir)
+
+    for file in file_names:
+        print ("Using GCP APIs to process ", file)
+        output_folder, confidence = main_doc_iden(file) 
+        move_file(file, output_folder) 
 
 else:
     sort_doc(image_dir,ml_flag)
