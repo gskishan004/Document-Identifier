@@ -61,6 +61,7 @@ Incase of error while running first command, consider running terminal with Admi
 - [ ] Create global config file with paths to path_labels etc in predict.py
 - [ ] Segregate various docs from an image (As google vision API does a bad job at this, we will use our custom trained models)
 - [ ] Create script to form more complex training data form exiting training data.
+- [ ] Fix bug where file already exists (in move_doc function)
 
 ## Done:
 - [x] Developed a fairly stable version of document identifier
