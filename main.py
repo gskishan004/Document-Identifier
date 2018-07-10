@@ -5,6 +5,8 @@ import argparse
 import sys
 import platform
 
+doc_spans_multiple_page = ["Certificate of incorporation"]
+
 CWD_PATH = os.getcwd()
 
 
@@ -105,10 +107,21 @@ elif(word_doc_flag):
 
     remove_doc_files(image_dir)
 
+    output_folder_list = []
+    confidence_list    = []
+
     for file in file_names:
         print ("Using GCP APIs to process ", file)
         output_folder, confidence = main_doc_iden(file) 
-        move_file(file, output_folder) 
+                    
+        output_folder_list.append(output_folder)
+        confidence_list.append(confidence)
+
+        # if there is no "No_Match" after a doc with matches category of span_multiple pages
+        # save Images after No_match and untill some other doc is recognised
+
+
+    move_file(file, output_folder) 
 
 else:
     sort_doc(image_dir,ml_flag)
