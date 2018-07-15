@@ -9,7 +9,6 @@ doc_spans_multiple_page = ["Certificate of incorporation"]
 
 CWD_PATH = os.getcwd()
 
-
 p1 = os.path.join(CWD_PATH,'ml','models')
 p2 = os.path.join(CWD_PATH,'ml','models','research')
 p3 = os.path.join(CWD_PATH,'ml','models','research','slim')
@@ -23,6 +22,7 @@ sys.path.append(p4)
 from   doc_iden                 import main_doc_iden
 from   lib.word_doc_iden        import main_word_doc_iden 
 from   lib.word_doc_iden        import remove_doc_files
+from   lib.get_move_list		import main_get_move_list
 from   ml.ml_predict            import predict
 from   ml.ml_train              import train
 from   ml.ml_predict_multiple   import predict_multiple
@@ -104,6 +104,7 @@ elif(word_doc_flag):
     print ("Processing images from word doc")
     #returns file names
     file_names = main_word_doc_iden(image_dir)
+    file_names = sorted(file_names)
 
     remove_doc_files(image_dir)
 
@@ -114,14 +115,15 @@ elif(word_doc_flag):
         print ("Using GCP APIs to process ", file)
         output_folder, confidence = main_doc_iden(file) 
                     
-        output_folder_list.append(output_folder)
+        output_folder_list.append((output_folder,file))
         confidence_list.append(confidence)
 
         # if there is no "No_Match" after a doc with matches category of span_multiple pages
         # save Images after No_match and untill some other doc is recognised
+    final_move_list = main_get_move_list(output_folder_list, doc_spans_multiple_page)
 
-
-    move_file(file, output_folder) 
+    for data in final_move_list:
+        move_file(data[0], data[1]) 
 
 else:
     sort_doc(image_dir,ml_flag)
