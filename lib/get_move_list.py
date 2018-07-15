@@ -1,7 +1,3 @@
-#output_folder_list = [("DL","abc.img"), ("COI","123.img"), ("NM","42.img"), ("NM","412.img"), ("COO","213wd.img"), ("DL","idf.img"), ("COO","dsfasd.img"), ("NM","dfsd.img"), ("NM","dfsdw.img"), ("COO","d123.img"),("COI","9584.img"), ("NM","d231.img"), ("NM","12.img"), ("COI2","dcd.img"), ("NM","df21.img"), ("NM","23156.img")]
-
-#doc_spans_multiple_page = ["COI", "COI2","COO"]
-
 def supported_doc(folder,doc_spans_multiple_page):
 	for doc in doc_spans_multiple_page:
 		if (folder.lower() == doc.lower()):
