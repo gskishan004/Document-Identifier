@@ -4,9 +4,9 @@ import os
 
 
 # Imports the Google Cloud client library
-from google.cloud import vision
-from google.cloud.vision import types
-from google.oauth2 import service_account
+from google.cloud           import vision
+from google.cloud.vision    import types
+from google.oauth2          import service_account
 
 
 def get_label_annotations(annotations):

@@ -33,7 +33,6 @@ from   ml.ml_predict_multiple   import predict_multiple
 def sort_doc(path,ml_flag):
 
     for file in glob.glob(path + '/*.jpg'):
-        
 
         if(ml_flag):
             print ("Using cutom ML model to process ",file)
@@ -78,10 +77,7 @@ def move_file_to_docx(input_path, output_path):
         r.add_picture(input_path)
         document.save(output_path)
 
-
     os.remove(input_path)
-
-
 
 if (platform.system() == "Windows"):
     os.system('cls')

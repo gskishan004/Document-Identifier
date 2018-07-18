@@ -2,7 +2,7 @@ import spacy
 import os
 
 nlp			= spacy.load('en_core_web_lg')
-result = []
+result		= []
 
 def spacy_nlp_match(features):
 

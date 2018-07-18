@@ -59,11 +59,12 @@ Incase of error while running first command, consider running terminal with Admi
 - [ ] remove dependency on user for running export_inference_graph
 - [ ] Get Keys for GCP 
 - [ ] Create global config file with paths to path_labels etc in predict.py
-- [ ] Segregate various docs from an image (As google vision API does a bad job at this, we will use our custom trained models)
-- [ ] Create script to form more complex training data form exiting training data.
+- [ ] Create script to form more complex training data form exiting training data
 - [ ] Fix bug where file already exists (in move_doc function)
 
 ## Done:
+- [x] Extract images from docx and rewrite them into new docx files (according to their content)
+- [x] Segregate various docs from an image (As google vision API does a bad job at this, we will use our custom trained models)
 - [x] Developed a fairly stable version of document identifier
 - [x] Remove darknet dependencies (function for converting the data to YOLO format etc..) 
 - [x] PPT stating the reson for choosing TF or darknet
