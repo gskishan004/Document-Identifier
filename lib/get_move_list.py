@@ -11,11 +11,12 @@ def check_if_not_equal(filename, files_to_remove_list):
 	return 1
 
 def main_get_move_list(output_folder_list, doc_spans_multiple_page):
-	final_move_list= []
-	files_to_remove = []
-	start_list = []
-	end_list = []
-	doc_type_list = []
+	final_move_list 	= []
+	final_move_list_doc = []
+	files_to_remove 	= []
+	start_list 			= []
+	end_list 			= []
+	doc_type_list 		= []
 
 	for i in range (0, len(output_folder_list)):
 		if (supported_doc(output_folder_list[i][0], doc_spans_multiple_page)):
@@ -36,7 +37,7 @@ def main_get_move_list(output_folder_list, doc_spans_multiple_page):
 		folder_name = output_folder_list[start_list[i]][0] + "_" + str(i)
 		for j in range (start_list[i], end_list[i] + 1):
 			files_to_remove.append(output_folder_list[j][1])
-			final_move_list.append((output_folder_list[j][1], folder_name))
+			final_move_list_doc.append((output_folder_list[j][1], folder_name))
 
 	files_to_remove = list (set(files_to_remove))
 
@@ -45,4 +46,4 @@ def main_get_move_list(output_folder_list, doc_spans_multiple_page):
 			final_move_list.append((output_folder_list[i][1], output_folder_list[i][0]))
 
 
-	return final_move_list
+	return (final_move_list, final_move_list_doc)
