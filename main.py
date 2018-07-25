@@ -30,22 +30,30 @@ from   ml.ml_predict            import predict
 from   ml.ml_train              import train
 from   ml.ml_predict_multiple   import predict_multiple
 
-def sort_doc(path,ml_flag):
+def sort_doc(path, ml_flag, train_flag):
 
     for file in glob.glob(path + '/*.jpg'):
 
         if(ml_flag):
             print ("Using cutom ML model to process ",file)
-            output_folder, confidence = predict(file)
+            output_path, confidence 	= predict(file)
+            output_path    			  	= os.path.join(os.getcwd(), ("output\\"+output_path))
+
+        elif(train_flag):
+        	output_path    			  	= os.path.join(os.getcwd(), ("ml\\data"))
 
         else:
             print ("Using GCP APIs to process ", file)
-            output_folder, confidence = main_doc_iden(file) 
+            output_path, confidence 	= main_doc_iden(file) 
+            output_path    				= os.path.join(os.getcwd(), ("output\\"+output_path))
             
-        move_file(file, output_folder)    
+        move_file(file, output_path)  
+
+    if (train_flag):
+    	train()
+
 
 def move_file(input_path, output_path):
-    output_path    = os.path.join(os.getcwd(), ("output\\"+output_path))
     file_name = input_path.rsplit('\\', 1)[1]
 
     if not os.path.exists(output_path):
@@ -117,11 +125,9 @@ word_doc_flag   = args.w_arg
 
 image_dir       = os.path.join(os.getcwd(), (folder))
 
-if(train_flag):
-    print ("Training the model")
-    train()
 
-elif(seg_flag):
+
+if(seg_flag):
     print ("Segregating the doc")
     predict_multiple(image_dir+"\\test.jpg")
 
@@ -138,9 +144,9 @@ elif(word_doc_flag):
 
     for file in file_names:
         print ("Using GCP APIs to process ", file)
-        output_folder, confidence = main_doc_iden(file) 
+        output_path, confidence = main_doc_iden(file) 
                     
-        output_folder_list.append((output_folder,file))
+        output_folder_list.append((output_path,file))
         confidence_list.append(confidence)
 
         # if there is no "No_Match" after a doc with matches category of span_multiple pages
@@ -149,10 +155,11 @@ elif(word_doc_flag):
 
 
     for data in final_move_list:
-        move_file(data[0], data[1]) 
+        output_path    			  	     = os.path.join(os.getcwd(), ("output\\"+data[1]))
+        move_file(data[0], output_path) 
 
     for data in final_move_list_doc:
         move_file_to_docx(data[0], data[1])
 
 else:
-    sort_doc(image_dir,ml_flag)
+    sort_doc(image_dir,ml_flag,train_flag)
