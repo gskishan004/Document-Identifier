@@ -5,7 +5,7 @@ import argparse
 import sys
 import platform
 
-doc_spans_multiple_page = ["Certificate of incorporation"]
+doc_spans_multiple_page = ["Certificate of incorporation", "incorporation"]
 
 CWD_PATH = os.getcwd()
 
